@@ -4,14 +4,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04        # было: ubuntu-latest (сейчас это 26.04)
+    runs-on: ubuntu-22.04        # было ubuntu-latest / 24.04
     steps:
       - uses: actions/checkout@v4
 
       - name: Build APK
         uses: digreatbrian/buildozer-action@v2
         with:
-          python-version: '3.11'   # было: 3.11.9
+          python-version: '3.11'
           buildozer-cmd: buildozer -v android debug
 
       - name: Upload artifacts
