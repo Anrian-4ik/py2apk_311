@@ -8,6 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Clean buildozer cache
+        run: rm -rf .buildozer
       - name: Build APK
         uses: digreatbrian/buildozer-action@v2
         with:
