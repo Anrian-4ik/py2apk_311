@@ -1,6 +1,7 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import StringProperty
+from kivy.utils import platform
 from kivy.core.window import Window
 
 # Задаём размер окна для тестирования
