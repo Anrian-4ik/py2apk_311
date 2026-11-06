@@ -4,8 +4,9 @@ from kivy.properties import StringProperty
 from kivy.core.window import Window
 
 # Задаём размер окна для тестирования
-Window.size = (350, 600)
-
+# Размер окна только для десктопа (Windows/macOS/Linux)
+if platform not in ('android', 'ios'):
+    Window.size = (350, 600)
 class ConverterLayout(BoxLayout):
     result = StringProperty('0.00')
 
