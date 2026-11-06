@@ -1,7 +1,7 @@
 <ConverterLayout>:
     orientation: 'vertical'
-    padding: 20
-    spacing: 10
+    padding: dp(20)
+    spacing: dp(10)
 
     canvas.before:
         Color:
@@ -12,17 +12,17 @@
 
     Label:
         text: 'Конвертер валют'
-        font_size: 28
+        font_size: '28sp'
         size_hint_y: None
-        height: 50
+        height: dp(50)
         color: 0, 0.5, 0.7, 1
 
     BoxLayout:
         orientation: 'vertical'
         size_hint_y: None
-        height: 200
-        padding: 10
-        spacing: 10
+        height: dp(220)
+        padding: dp(10)
+        spacing: dp(10)
 
         canvas.before:
             Color:
@@ -30,13 +30,13 @@
             RoundedRectangle:
                 pos: self.pos
                 size: self.size
-                radius: [15]
+                radius: [dp(15)]
 
         Label:
             text: 'Введите сумму:'
             color: 0, 0, 0, 1
             size_hint_y: None
-            height: 30
+            height: dp(30)
             halign: 'left'
             text_size: self.width, None
 
@@ -46,14 +46,15 @@
             input_filter: 'float'
             multiline: False
             size_hint_y: None
-            height: 40
-            padding: [10, 10, 10, 0]
+            height: dp(48)
+            font_size: '18sp'
+            padding: [dp(10), dp(10), dp(10), 0]
 
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: 100
-            spacing: 10
+            height: dp(90)
+            spacing: dp(10)
 
             BoxLayout:
                 orientation: 'vertical'
@@ -67,7 +68,7 @@
                     text: 'RUB'
                     values: ['RUB', 'USD', 'EUR']
                     size_hint_y: None
-                    height: 40
+                    height: dp(48)
 
             BoxLayout:
                 orientation: 'vertical'
@@ -81,21 +82,22 @@
                     text: 'USD'
                     values: ['RUB', 'USD', 'EUR']
                     size_hint_y: None
-                    height: 40
+                    height: dp(48)
 
         Button:
             text: 'Конвертировать'
             size_hint_y: None
-            height: 50
+            height: dp(56)
+            font_size: '18sp'
             background_color: 0, 0.7, 0.3, 1
             on_press: root.convert()
 
     BoxLayout:
         orientation: 'vertical'
         size_hint_y: None
-        height: 150
-        padding: 10
-        spacing: 5
+        height: dp(150)
+        padding: dp(10)
+        spacing: dp(5)
 
         canvas.before:
             Color:
@@ -103,17 +105,17 @@
             RoundedRectangle:
                 pos: self.pos
                 size: self.size
-                radius: [15]
+                radius: [dp(15)]
 
         Label:
             text: 'Результат:'
             color: 0, 0, 0, 1
             size_hint_y: None
-            height: 30
+            height: dp(30)
             halign: 'left'
             text_size: self.width, None
 
         Label:
             text: root.result
-            font_size: 32
+            font_size: '32sp'
             color: 0, 0.5, 0.7, 1
